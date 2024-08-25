@@ -25,6 +25,7 @@ func Generate(word1, word2 string) string {
 	}
 
 	seed := utils.HexToInt64(hashHex[:16])
+	// #nosec G404
 	r := rand.New(rand.NewSource(seed))
 
 	// Generate base password
